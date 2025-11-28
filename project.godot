@@ -14,6 +14,13 @@ config/name="room clear"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[file_customization]
+
+folder_colors={
+"res://data/": "purple",
+"res://textures/": "teal"
+}
+
 [rendering]
 
 renderer/rendering_method="gl_compatibility"
