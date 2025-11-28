@@ -1,0 +1,55 @@
+{
+	"categories": [
+		{
+			"uuid": "ae8345d5-2c2d-472f-9123-82453224cb45",
+			"title": "Task",
+			"color": "70fa9f"
+		},
+		{
+			"uuid": "789930d4-89a3-4389-a7b3-e0eb1c1de108",
+			"title": "Design",
+			"color": "dfae2c"
+		},
+		{
+			"uuid": "9c5e9a68-810b-4bb3-917a-14ba5c005b00",
+			"title": "Bug",
+			"color": "bf1e77"
+		},
+		{
+			"uuid": "3a367b9c-9775-4f06-8e09-cf05b74a35cd",
+			"title": "Backlog",
+			"color": "56b2c0"
+		}
+	],
+	"stages": [
+		{
+			"uuid": "892722d9-bc1e-46d0-bfe4-4bb1456fbc45",
+			"title": "Todo",
+			"tasks": []
+		},
+		{
+			"uuid": "eecd2f1a-d9b2-4e5e-9e0c-9a9ff015b3cc",
+			"title": "Doing",
+			"tasks": []
+		},
+		{
+			"uuid": "76495236-3b1e-4240-a0ba-d678a5804df7",
+			"title": "Done",
+			"tasks": []
+		}
+	],
+	"tasks": [],
+	"layout": {
+		"columns": [
+			[
+				"892722d9-bc1e-46d0-bfe4-4bb1456fbc45"
+			],
+			[
+				"eecd2f1a-d9b2-4e5e-9e0c-9a9ff015b3cc"
+			],
+			[
+				"76495236-3b1e-4240-a0ba-d678a5804df7"
+			]
+		]
+	}
+}
