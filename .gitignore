@@ -1,3 +1,8 @@
-# Godot 4+ specific ignores
+# Godot-specific ignores
 .godot/
-/android/
+.import/
+export.cfg
+export_presets.cfg
+
+# Mono-specific ignores
+.mono/
