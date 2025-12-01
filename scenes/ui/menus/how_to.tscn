@@ -1,0 +1,59 @@
+[gd_scene load_steps=3 format=3 uid="uid://c741gc1ncbqmb"]
+
+[ext_resource type="Script" uid="uid://cjdqvtepf7jpf" path="res://code/ui/menus/how_to.gd" id="1_hrb4d"]
+[ext_resource type="Script" uid="uid://cce67g4obfars" path="res://code/ui/rid_button.gd" id="2_4brnw"]
+
+[node name="HowTo" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_hrb4d")
+id = &"how_to"
+metadata/_custom_type_script = "uid://bywk6b8aj4mi"
+
+[node name="background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(266, 202)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 261.0
+offset_bottom = 197.0
+color = Color(0.1302034, 0.2952676, 0.4363467, 1)
+
+[node name="vbox" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 192.0
+theme_override_constants/separation = 0
+
+[node name="page_title" type="Label" parent="vbox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_type_variation = &"MenuTitle"
+text = "How To"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="spacer" type="Control" parent="vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="bottom_hbox" type="HBoxContainer" parent="vbox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="btn_back" type="Button" parent="vbox/bottom_hbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Back"
+script = ExtResource("2_4brnw")
+
+[node name="spacer" type="Control" parent="vbox/bottom_hbox"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="spacer_bottom" type="Control" parent="vbox"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2

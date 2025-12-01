@@ -1,0 +1,113 @@
+[gd_scene load_steps=3 format=3 uid="uid://c11rpl0emwc8n"]
+
+[ext_resource type="Script" uid="uid://dive34lltk6wi" path="res://code/ui/menus/credits.gd" id="1_3ikd0"]
+[ext_resource type="Script" uid="uid://cce67g4obfars" path="res://code/ui/rid_button.gd" id="2_w063j"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_3ikd0")
+id = &"credits"
+metadata/_custom_type_script = "uid://dive34lltk6wi"
+
+[node name="background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(266, 202)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 261.0
+offset_bottom = 197.0
+color = Color(0.17850265, 0.31921613, 0.23816916, 1)
+
+[node name="vbox" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(256, 192)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 0
+
+[node name="page_title" type="Label" parent="vbox"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+theme_type_variation = &"MenuTitle"
+text = "Credits"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="spacer" type="Control" parent="vbox"]
+custom_minimum_size = Vector2(0, 5)
+layout_mode = 2
+
+[node name="hbox" type="HBoxContainer" parent="vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="spacer" type="Control" parent="vbox/hbox"]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 3
+
+[node name="vbox2" type="VBoxContainer" parent="vbox/hbox/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="section_title" type="Label" parent="vbox/hbox/ScrollContainer/vbox2"]
+layout_mode = 2
+theme_type_variation = &"CreditSectionTitle"
+text = "Section"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="section" type="GridContainer" parent="vbox/hbox/ScrollContainer/vbox2"]
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="Label" type="Label" parent="vbox/hbox/ScrollContainer/vbox2/section"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CreditsNames"
+text = "Position"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="vbox/hbox/ScrollContainer/vbox2/section"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"CreditsNames"
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="spacer2" type="Control" parent="vbox/hbox"]
+custom_minimum_size = Vector2(50, 20)
+layout_mode = 2
+
+[node name="bottom_hbox" type="HBoxContainer" parent="vbox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="btn_back" type="Button" parent="vbox/bottom_hbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Back"
+script = ExtResource("2_w063j")
+
+[node name="spacer" type="Control" parent="vbox/bottom_hbox"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="spacer3" type="Control" parent="vbox"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2

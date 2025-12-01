@@ -1,0 +1,33 @@
+[gd_scene load_steps=3 format=3 uid="uid://8647d8wxrear"]
+
+[ext_resource type="Script" uid="uid://nxxlid00ew24" path="res://code/ui/save_icon.gd" id="1_gky6b"]
+[ext_resource type="Texture2D" uid="uid://dqe5d52w5ro6t" path="res://textures/ui/save_icon.png" id="1_vhikj"]
+
+[node name="SaveIcon" type="Control"]
+top_level = true
+z_index = 4096
+z_as_relative = false
+custom_minimum_size = Vector2(256, 192)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_gky6b")
+
+[node name="icon" type="TextureRect" parent="."]
+unique_name_in_owner = true
+top_level = true
+z_index = 4096
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 10.0
+offset_top = -42.0
+offset_right = 42.0
+offset_bottom = -10.0
+grow_vertical = 0
+texture = ExtResource("1_vhikj")

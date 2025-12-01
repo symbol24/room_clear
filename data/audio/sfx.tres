@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="AudioFile" load_steps=3 format=3 uid="uid://ghdpasia543e"]
+
+[ext_resource type="Script" uid="uid://onqs538eykno" path="res://code/audio/audio_file.gd" id="1_d60y7"]
+[ext_resource type="AudioStream" uid="uid://ehv6aal2i6l6" path="res://audio/sfx/SFX Shoot.wav" id="1_l2ub7"]
+
+[resource]
+script = ExtResource("1_d60y7")
+audio_name = &"test_sfx"
+_file = Array[AudioStream]([ExtResource("1_l2ub7")])
+metadata/_custom_type_script = "uid://bn3jjgggshqlm"

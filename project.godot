@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="room clear"
+run/main_scene="uid://blxwerg0scb0b"
 config/features=PackedStringArray("4.5", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Signals="*res://code/autoload/signals.gd"
+
+[debug]
+
+gdscript/warnings/unused_signal=0
 
 [display]
 
@@ -20,7 +29,7 @@ window/size/viewport_width=512
 window/size/viewport_height=288
 window/size/window_width_override=1920
 window/size/window_height_override=1080
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
 
 [editor_plugins]
 
@@ -29,10 +38,16 @@ enabled=PackedStringArray("res://addons/kanban_tasks/plugin.cfg")
 [file_customization]
 
 folder_colors={
+"res://audio/": "blue",
+"res://code/": "yellow",
 "res://data/": "purple",
 "res://scenes/": "red",
 "res://textures/": "teal"
 }
+
+[gui]
+
+theme/custom="uid://bv127b8g6qnhn"
 
 [input]
 

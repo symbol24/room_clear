@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://cwgv3f4uxbex2"]
+
+[ext_resource type="Script" uid="uid://bcvsomn1pplru" path="res://code/ui/menus/settings/setting_button.gd" id="1_es7mu"]
+[ext_resource type="Script" uid="uid://cce67g4obfars" path="res://code/ui/rid_button.gd" id="2_w6iri"]
+
+[node name="SettingButton" type="HBoxContainer"]
+custom_minimum_size = Vector2(196, 10)
+size_flags_horizontal = 3
+script = ExtResource("1_es7mu")
+metadata/_custom_type_script = "uid://bcvsomn1pplru"
+
+[node name="setting_label" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_type_variation = &"SettingLabel"
+text = "name of setting ifdkjfdfkjdf"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="btn_setting" type="Button" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(50, 10)
+layout_mode = 2
+size_flags_horizontal = 2
+size_flags_vertical = 4
+theme_type_variation = &"SettingBtn"
+text = "button"
+script = ExtResource("2_w6iri")

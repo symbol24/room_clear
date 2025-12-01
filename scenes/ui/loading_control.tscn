@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3 uid="uid://c587n0l8i4ur6"]
+
+[ext_resource type="Script" uid="uid://d01it4drkf6wo" path="res://code/ui/loading_control.gd" id="1_rt3j3"]
+
+[node name="LoadingControl" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_rt3j3")
+id = &"loading_screen"
+metadata/_custom_type_script = "uid://d01it4drkf6wo"
+
+[node name="background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(266, 202)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 261.0
+offset_bottom = 197.0
+color = Color(0.07450981, 0.07450981, 0.07450981, 1)
+
+[node name="loading_text" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 206.0
+offset_top = 172.0
+offset_right = 256.0
+offset_bottom = 184.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Loading"
+vertical_alignment = 1

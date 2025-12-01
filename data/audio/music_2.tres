@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="AudioFile" load_steps=3 format=3 uid="uid://cqrhp40lec5lh"]
+
+[ext_resource type="AudioStream" uid="uid://bdokt8gs367r6" path="res://audio/music/Mushroom Tunnels.mp3" id="1_jpicf"]
+[ext_resource type="Script" uid="uid://onqs538eykno" path="res://code/audio/audio_file.gd" id="2_nscuu"]
+
+[resource]
+script = ExtResource("2_nscuu")
+audio_name = &"music_2"
+_file = Array[AudioStream]([ExtResource("1_jpicf")])
+_pitch = Vector2(1, 1)
+is_music = true
+metadata/_custom_type_script = "uid://onqs538eykno"

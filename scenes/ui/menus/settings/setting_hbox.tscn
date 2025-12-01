@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://dyptf65pd1s6y"]
+
+[ext_resource type="Script" uid="uid://w1gx5bky8b56" path="res://code/ui/menus/settings/setting_hbox.gd" id="1_aagyv"]
+
+[node name="setting_hbox" type="HBoxContainer"]
+custom_minimum_size = Vector2(196, 10)
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+script = ExtResource("1_aagyv")
+
+[node name="setting_label" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_type_variation = &"SettingLabel"
+text = "name of setting ifdkjfdfkjdf"
+clip_text = true
+text_overrun_behavior = 3

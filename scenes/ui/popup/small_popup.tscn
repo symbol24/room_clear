@@ -1,0 +1,35 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnq18cj5m1x83"]
+
+[ext_resource type="Script" uid="uid://bbuwf5u0couxw" path="res://code/ui/popup/small_popup.gd" id="1_qxfn4"]
+
+[node name="SmallPopup" type="Control"]
+custom_minimum_size = Vector2(256, 192)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qxfn4")
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(128, 24)
+layout_mode = 0
+offset_left = 64.0
+offset_top = 30.0
+offset_right = 192.0
+offset_bottom = 57.0
+theme_type_variation = &"SmallPpopupPanel"
+
+[node name="description" type="Label" parent="PanelContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 21)
+layout_mode = 2
+size_flags_vertical = 1
+theme_type_variation = &"SmallPopupDescription"
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse commodo consectetur quam, eget sodales tellus interdum sed. In tempor ornare iaculis. Pellentesque facilisis orci a suscipit ullamcorper. Sed dolor eros, lacinia et euismod non, vulputate sed turpis. Mauris elementum gravida ligula feugiat pulvinar. Morbi pellentesque sagittis enim tempor luctus. Curabitur massa justo, tristique id elit et, mattis dictum ex. Sed ac nibh ac massa vehicula tempus id a nisi."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+clip_text = true
+text_overrun_behavior = 4

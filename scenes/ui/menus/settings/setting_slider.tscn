@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckto5e3blc61y"]
+
+[ext_resource type="Script" uid="uid://ynybh1s3a6wl" path="res://code/ui/menus/settings/setting_slider.gd" id="1_p5b83"]
+
+[node name="SettingSlider" type="HBoxContainer"]
+custom_minimum_size = Vector2(196, 10)
+size_flags_horizontal = 3
+script = ExtResource("1_p5b83")
+metadata/_custom_type_script = "uid://ynybh1s3a6wl"
+
+[node name="setting_label" type="Label" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 0)
+layout_mode = 2
+theme_type_variation = &"SettingLabel"
+text = "name of setting ifdkjfdfkjdf"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="hslider" type="HSlider" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 1.0
+step = 0.1
+value = 0.5
+ticks_position = 3
