@@ -21,3 +21,13 @@ var default_dyslexic_font := false
 @export var window_mode:GameManager.Window_Mode = GameManager.Window_Mode.FULLSCREEN
 var default_resolution := 2
 var default_windowmod:GameManager.Window_Mode = GameManager.Window_Mode.FULLSCREEN
+
+
+@export var player_unlocked_characters:Array[StringName] = []
+var default_unlocked_characters:Array[StringName] = []
+var unlocked_characters:Array[StringName]:
+	get:
+		unlocked_characters.clear()
+		unlocked_characters.append_array(default_unlocked_characters)
+		unlocked_characters.append_array(player_unlocked_characters)
+		return unlocked_characters

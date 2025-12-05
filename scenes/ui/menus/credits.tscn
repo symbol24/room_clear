@@ -15,19 +15,19 @@ custom_minimum_size = Vector2(266, 202)
 layout_mode = 0
 offset_left = -5.0
 offset_top = -5.0
-offset_right = 261.0
-offset_bottom = 197.0
+offset_right = 533.0
+offset_bottom = 294.0
 color = Color(0.17850265, 0.31921613, 0.23816916, 1)
 
 [node name="vbox" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(256, 192)
+custom_minimum_size = Vector2(528, 288)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 0
 
 [node name="page_title" type="Label" parent="vbox"]
-custom_minimum_size = Vector2(0, 50)
+custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 theme_type_variation = &"MenuTitle"
 text = "Credits"
@@ -98,7 +98,7 @@ theme_override_constants/separation = 0
 
 [node name="btn_back" type="Button" parent="vbox/bottom_hbox"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(40, 0)
+custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Back"

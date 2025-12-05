@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://jby7lgv0mata"]
+
+[ext_resource type="Script" uid="uid://757gr75fwmpu" path="res://code/characters/character.gd" id="1_1bdar"]
+[ext_resource type="TileSet" uid="uid://bpkpb6ourtk4s" path="res://data/everything.tres" id="1_x31xa"]
+[ext_resource type="Script" uid="uid://ctavspv3mukji" path="res://code/characters/aim.gd" id="3_e22cc"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1bdar"]
+radius = 2.0
+
+[sub_resource type="Curve" id="Curve_1bdar"]
+_data = [Vector2(0, 0.1460675), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="character" type="CharacterBody2D"]
+top_level = true
+z_index = 4096
+script = ExtResource("1_1bdar")
+
+[node name="sprite" type="TileMapLayer" parent="."]
+position = Vector2(-6, -7)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 104, 0, 0, 0, 0, 0)
+tile_set = ExtResource("1_x31xa")
+
+[node name="move_collider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_1bdar")
+
+[node name="camera" type="Camera2D" parent="."]
+zoom = Vector2(1.5, 1.5)
+position_smoothing_enabled = true
+
+[node name="aim" type="Node2D" parent="."]
+script = ExtResource("3_e22cc")
+
+[node name="aim_line" type="Line2D" parent="aim"]
+unique_name_in_owner = true
+points = PackedVector2Array(10, 0, 40, 0)
+width = 1.0
+width_curve = SubResource("Curve_1bdar")
+default_color = Color(1, 0.7019608, 1, 0.54509807)
+
+[node name="marker" type="Node2D" parent="aim"]
+unique_name_in_owner = true
+
+[node name="visual" type="TileMapLayer" parent="aim/marker"]
+position = Vector2(-6, 6)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 80, 0, 18, 0, 0, 0)
+tile_set = ExtResource("1_x31xa")

@@ -298,8 +298,8 @@ script = ExtResource("1_wetwo")
 custom_minimum_size = Vector2(266, 202)
 offset_left = -5.0
 offset_top = -5.0
-offset_right = 261.0
-offset_bottom = 197.0
+offset_right = 539.0
+offset_bottom = 301.0
 color = Color(0.24313726, 0.24313726, 0.5176471, 1)
 
 [node name="godot" type="AnimatedSprite2D" parent="."]

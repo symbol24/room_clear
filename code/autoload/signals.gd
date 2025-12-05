@@ -12,6 +12,9 @@ signal generate_dropdown_items(id:StringName, values:Array[String])
 signal display_large_popup(id:StringName, title:String, description:String, use_timer:bool)
 signal display_small_popup(description:String)
 signal popup_result(id:StringName, is_confirmed:bool)
+signal update_displayed_character(data:CharacterData)
+signal character_select_press_select_button(id:StringName)
+signal character_select_select_character(data:CharacterData)
 
 # Scene Manager
 signal load_scene(id:StringName, display_loading:bool, extra_time:bool)
@@ -23,6 +26,7 @@ signal update_window_mode(mode:GameManager.Window_Mode, resolution_choice:int)
 signal update_resolution(choice:int)
 signal update_font(is_dyslexia_friendly:bool)
 signal update_language(locale:String)
+signal select_character(data:CharacterData)
 
 # Audio Manager
 signal volumes_updated()

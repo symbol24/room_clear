@@ -4,4 +4,7 @@
 
 [resource]
 script = ExtResource("1_b5506")
+list = Dictionary[StringName, String]({
+&"test_level": "uid://x5lhs8x4k01k"
+})
 metadata/_custom_type_script = "uid://b7h4wew522anf"

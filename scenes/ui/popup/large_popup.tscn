@@ -15,17 +15,17 @@ script = ExtResource("1_armox")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 clip_contents = true
-custom_minimum_size = Vector2(128, 96)
+custom_minimum_size = Vector2(232, 144)
 layout_mode = 0
-offset_left = 64.0
-offset_top = 32.0
-offset_right = 192.0
-offset_bottom = 128.0
+offset_left = 148.0
+offset_top = 60.0
+offset_right = 380.0
+offset_bottom = 204.0
 theme_type_variation = &"LargePopupPC"
 
 [node name="vbox" type="VBoxContainer" parent="PanelContainer"]
 layout_mode = 2
-theme_override_constants/separation = 0
+theme_override_constants/separation = 4
 
 [node name="title" type="Label" parent="PanelContainer/vbox"]
 unique_name_in_owner = true
@@ -74,7 +74,7 @@ size_flags_horizontal = 3
 
 [node name="btn_confirm" type="Button" parent="PanelContainer/vbox/bottom_hbox"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
+custom_minimum_size = Vector2(50, 18)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8
@@ -87,7 +87,7 @@ layout_mode = 2
 
 [node name="btn_cancel" type="Button" parent="PanelContainer/vbox/bottom_hbox"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(0, 12)
+custom_minimum_size = Vector2(50, 18)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 8

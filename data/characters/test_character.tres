@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=7 format=3 uid="uid://bisv0g1sjnffr"]
+
+[ext_resource type="Script" uid="uid://baf5uip7aox3j" path="res://code/characters/ability_data.gd" id="1_fnqvu"]
+[ext_resource type="Script" uid="uid://dnd15fdjyhvcl" path="res://code/characters/character_data.gd" id="1_g711j"]
+
+[sub_resource type="Resource" id="Resource_b11x0"]
+script = ExtResource("1_fnqvu")
+id = &"primary"
+display_name = "stab"
+description = "stabs towards aim"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[sub_resource type="Resource" id="Resource_jn76n"]
+script = ExtResource("1_fnqvu")
+id = &"secondary"
+display_name = "dash stab"
+description = "dash towards aim while stabing and not invulnerable"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[sub_resource type="Resource" id="Resource_r33mk"]
+script = ExtResource("1_fnqvu")
+id = &"special"
+display_name = "twirl"
+description = "360 sword attack around character"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[sub_resource type="Resource" id="Resource_pux3a"]
+script = ExtResource("1_fnqvu")
+id = &"movement"
+display_name = "dash"
+description = "dash towards movement with invulnerability frames"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[resource]
+script = ExtResource("1_g711j")
+abilities = Array[ExtResource("1_fnqvu")]([SubResource("Resource_b11x0"), SubResource("Resource_jn76n"), SubResource("Resource_r33mk"), SubResource("Resource_pux3a")])
+image_coords = Vector2i(149, 0)
+id = &"test_character"
+display_name = "Test 1"
+description = "a test character"
+metadata/_custom_type_script = "uid://dnd15fdjyhvcl"

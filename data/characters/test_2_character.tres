@@ -1,0 +1,41 @@
+[gd_resource type="Resource" script_class="CharacterData" load_steps=7 format=3 uid="uid://b4jvqiqxonifd"]
+
+[ext_resource type="Script" uid="uid://baf5uip7aox3j" path="res://code/characters/ability_data.gd" id="1_777ta"]
+[ext_resource type="Script" uid="uid://dnd15fdjyhvcl" path="res://code/characters/character_data.gd" id="1_gc7ot"]
+
+[sub_resource type="Resource" id="Resource_s6ffi"]
+script = ExtResource("1_777ta")
+id = &"primary"
+display_name = "shoot"
+description = "shoot towards aim"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[sub_resource type="Resource" id="Resource_3pdac"]
+script = ExtResource("1_777ta")
+id = &"secondary"
+display_name = "grenade"
+description = "throw a grenade with an explision delay towards aime"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[sub_resource type="Resource" id="Resource_dshsx"]
+script = ExtResource("1_777ta")
+id = &"special"
+display_name = "empty gun"
+description = "shoot all remaining bullets in gun like a machine gun"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[sub_resource type="Resource" id="Resource_gn5vd"]
+script = ExtResource("1_777ta")
+id = &"movement"
+display_name = "dash"
+description = "dash towards movement with invulnerability frames"
+metadata/_custom_type_script = "uid://baf5uip7aox3j"
+
+[resource]
+script = ExtResource("1_gc7ot")
+abilities = Array[ExtResource("1_777ta")]([SubResource("Resource_s6ffi"), SubResource("Resource_3pdac"), SubResource("Resource_dshsx"), SubResource("Resource_gn5vd")])
+image_coords = Vector2i(111, 46)
+id = &"test_character_2"
+display_name = "Test 2"
+description = "a second test character"
+metadata/_custom_type_script = "uid://dnd15fdjyhvcl"

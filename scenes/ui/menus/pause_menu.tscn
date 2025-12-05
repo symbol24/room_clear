@@ -1,13 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c741gc1ncbqmb"]
+[gd_scene load_steps=3 format=3 uid="uid://ydwvstm4y87s"]
 
-[ext_resource type="Script" uid="uid://cjdqvtepf7jpf" path="res://code/ui/menus/how_to.gd" id="1_hrb4d"]
-[ext_resource type="Script" uid="uid://cce67g4obfars" path="res://code/ui/rid_button.gd" id="2_4brnw"]
+[ext_resource type="Script" uid="uid://mr5jntm8cfeq" path="res://code/ui/menus/pause_menu.gd" id="1_5p30d"]
+[ext_resource type="Script" uid="uid://cce67g4obfars" path="res://code/ui/rid_button.gd" id="2_dd7lr"]
 
-[node name="HowTo" type="Control"]
+[node name="PauseMenu" type="Control"]
+custom_minimum_size = Vector2(528, 288)
 layout_mode = 3
 anchors_preset = 0
-script = ExtResource("1_hrb4d")
-id = &"how_to"
+script = ExtResource("1_5p30d")
+id = &"pause_menu"
+metadata/_custom_type_script = "uid://dcipihem7u53h"
 
 [node name="background" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(266, 202)
@@ -16,7 +18,7 @@ offset_left = -5.0
 offset_top = -5.0
 offset_right = 536.0
 offset_bottom = 298.0
-color = Color(0.1302034, 0.2952676, 0.4363467, 1)
+color = Color(0.07450981, 0.07450981, 0.07450981, 0.6627451)
 
 [node name="vbox" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(528, 288)
@@ -29,7 +31,7 @@ theme_override_constants/separation = 0
 custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 theme_type_variation = &"MenuTitle"
-text = "How To"
+text = "Pause"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -48,7 +50,7 @@ custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_horizontal = 10
 text = "Back"
-script = ExtResource("2_4brnw")
+script = ExtResource("2_dd7lr")
 
 [node name="spacer" type="Control" parent="vbox/bottom_hbox"]
 custom_minimum_size = Vector2(10, 0)

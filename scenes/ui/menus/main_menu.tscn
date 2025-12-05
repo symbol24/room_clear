@@ -9,6 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_flhq8")
 btn_pressed_audio = ExtResource("2_h1kbi")
+play_target = &"test_level"
 id = &"main_menu"
 metadata/_custom_type_script = "uid://cdxh2c3t4vy71"
 
@@ -17,19 +18,19 @@ custom_minimum_size = Vector2(266, 202)
 layout_mode = 0
 offset_left = -5.0
 offset_top = -5.0
-offset_right = 261.0
-offset_bottom = 197.0
+offset_right = 543.0
+offset_bottom = 301.0
 color = Color(0.24313726, 0.24313726, 0.5176471, 1)
 
 [node name="vbox" type="VBoxContainer" parent="."]
-custom_minimum_size = Vector2(256, 192)
+custom_minimum_size = Vector2(528, 288)
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 theme_override_constants/separation = 0
 
 [node name="game_title" type="Label" parent="vbox"]
-custom_minimum_size = Vector2(256, 50)
+custom_minimum_size = Vector2(256, 75)
 layout_mode = 2
 theme_type_variation = &"MMGameTitle"
 text = "Game Title"
@@ -46,7 +47,7 @@ size_flags_vertical = 3
 theme_override_constants/separation = 0
 
 [node name="spacer" type="Control" parent="vbox/hbox"]
-custom_minimum_size = Vector2(75, 20)
+custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
 
 [node name="vbox2" type="VBoxContainer" parent="vbox/hbox"]
@@ -55,36 +56,41 @@ size_flags_horizontal = 3
 
 [node name="btn_play" type="Button" parent="vbox/hbox/vbox2"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 text = "Play"
 script = ExtResource("3_whicr")
 
 [node name="btn_settings" type="Button" parent="vbox/hbox/vbox2"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 text = "Settings"
 script = ExtResource("3_whicr")
 
 [node name="btn_how_to" type="Button" parent="vbox/hbox/vbox2"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 text = "How to Play"
 script = ExtResource("3_whicr")
 
 [node name="btn_credits" type="Button" parent="vbox/hbox/vbox2"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 text = "Credits"
 script = ExtResource("3_whicr")
 
 [node name="btn_quit" type="Button" parent="vbox/hbox/vbox2"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 text = "Quit"
 script = ExtResource("3_whicr")
 
 [node name="spacer2" type="Control" parent="vbox/hbox"]
-custom_minimum_size = Vector2(75, 20)
+custom_minimum_size = Vector2(150, 20)
 layout_mode = 2
 
 [node name="spacer2" type="Control" parent="vbox"]

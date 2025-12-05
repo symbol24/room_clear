@@ -32,11 +32,12 @@ enum Window_Mode {
 }
 
 
+var theme:Theme
+var active_character:CharacterData = null
 var _data:DataManager = null:
 	get:
 		if _data == null: _data = get_tree().get_first_node_in_group(&"data_manager")
 		return _data
-var theme:Theme
 
 
 func _init() -> void:
@@ -51,6 +52,12 @@ func _ready() -> void:
 	Signals.update_window_mode.connect(_update_window_mode)
 	Signals.update_font.connect(_update_font)
 	Signals.update_language.connect(_update_display_language)
+	Signals.toggle_pause.connect(_toggle_pause)
+	Signals.select_character.connect(_select_character)
+
+
+func _toggle_pause(value:bool) -> void:
+	get_tree().paused = value
 
 
 func _update_window_mode(_mode:Window_Mode, resolution_choice:int) -> void:
@@ -81,3 +88,7 @@ func _update_font(is_dyslexia_friendly := false) -> void:
 func _update_display_language(locale := "en") -> void:
 	locale = locale if locale in LOCALES else LOCALES[0]
 	TranslationServer.set_locale(locale)
+
+
+func _select_character(data:CharacterData) -> void:
+	active_character = data.duplicate(true)

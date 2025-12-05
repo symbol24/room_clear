@@ -1,0 +1,277 @@
+[gd_scene load_steps=7 format=3 uid="uid://7f0ufgbodjlo"]
+
+[ext_resource type="Script" uid="uid://bey2qt6ejo5fa" path="res://code/ui/menus/character_select.gd" id="1_ryox3"]
+[ext_resource type="Script" uid="uid://cce67g4obfars" path="res://code/ui/rid_button.gd" id="2_ap83c"]
+[ext_resource type="TileSet" uid="uid://bpkpb6ourtk4s" path="res://data/everything.tres" id="2_m8rp1"]
+[ext_resource type="PackedScene" uid="uid://dqew8y6r6kehh" path="res://scenes/ui/character_select/character_select_btn.tscn" id="3_ocodp"]
+[ext_resource type="Resource" uid="uid://bisv0g1sjnffr" path="res://data/characters/test_character.tres" id="4_vk5xj"]
+[ext_resource type="Resource" uid="uid://b4jvqiqxonifd" path="res://data/characters/test_2_character.tres" id="5_gxg30"]
+
+[node name="CharacterSelect" type="Control"]
+custom_minimum_size = Vector2(528, 288)
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_ryox3")
+play_target = &"test_level"
+id = &"character_select"
+metadata/_custom_type_script = "uid://dcipihem7u53h"
+
+[node name="background" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(266, 202)
+layout_mode = 0
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 536.0
+offset_bottom = 298.0
+color = Color(0.07450981, 0.07450981, 0.07450981, 0.6627451)
+
+[node name="vbox" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(528, 288)
+layout_mode = 0
+offset_right = 256.0
+offset_bottom = 192.0
+theme_override_constants/separation = 0
+
+[node name="page_title" type="Label" parent="vbox"]
+custom_minimum_size = Vector2(0, 64)
+layout_mode = 2
+theme_type_variation = &"MenuTitle"
+text = "Select Character"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="hbox" type="HBoxContainer" parent="vbox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 0
+
+[node name="spacer" type="Control" parent="vbox/hbox"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+
+[node name="character_vbox" type="VBoxContainer" parent="vbox/hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="info_hbox" type="HBoxContainer" parent="vbox/hbox/character_vbox"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="BoxContainer" type="BoxContainer" parent="vbox/hbox/character_vbox/info_hbox"]
+clip_contents = true
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+
+[node name="character_image" type="TileMapLayer" parent="vbox/hbox/character_vbox/info_hbox/BoxContainer"]
+unique_name_in_owner = true
+scale = Vector2(6, 6)
+tile_set = ExtResource("2_m8rp1")
+
+[node name="info_grid" type="GridContainer" parent="vbox/hbox/character_vbox/info_hbox"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="Label" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+custom_minimum_size = Vector2(82, 0)
+layout_mode = 2
+text = "Character"
+clip_text = true
+text_overrun_behavior = 2
+uppercase = true
+
+[node name="character_name" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Label3" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+custom_minimum_size = Vector2(82, 0)
+layout_mode = 2
+text = "Primary"
+clip_text = true
+text_overrun_behavior = 2
+uppercase = true
+
+[node name="ability_1" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Label5" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+custom_minimum_size = Vector2(82, 0)
+layout_mode = 2
+text = "Secondary"
+clip_text = true
+text_overrun_behavior = 2
+uppercase = true
+
+[node name="ability_2" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Label7" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+custom_minimum_size = Vector2(82, 0)
+layout_mode = 2
+text = "Special"
+clip_text = true
+text_overrun_behavior = 2
+uppercase = true
+
+[node name="ability_3" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="Label9" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+custom_minimum_size = Vector2(82, 0)
+layout_mode = 2
+text = "movement"
+clip_text = true
+text_overrun_behavior = 2
+uppercase = true
+
+[node name="ability_4" type="Label" parent="vbox/hbox/character_vbox/info_hbox/info_grid"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+clip_text = true
+text_overrun_behavior = 1
+
+[node name="character_grid" type="GridContainer" parent="vbox/hbox/character_vbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(16, 0)
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 8
+
+[node name="CharacterSelectBtn" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+character_data = ExtResource("4_vk5xj")
+
+[node name="CharacterSelectBtn2" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+character_data = ExtResource("5_gxg30")
+
+[node name="CharacterSelectBtn3" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn4" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn5" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn6" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn7" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn8" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn9" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn10" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn11" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn12" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn13" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn14" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn15" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn16" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn17" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn18" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn19" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn20" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn21" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn22" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn23" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="CharacterSelectBtn24" parent="vbox/hbox/character_vbox/character_grid" instance=ExtResource("3_ocodp")]
+layout_mode = 2
+
+[node name="spacer2" type="Control" parent="vbox/hbox"]
+custom_minimum_size = Vector2(125, 0)
+layout_mode = 2
+
+[node name="spacer" type="Control" parent="vbox"]
+custom_minimum_size = Vector2(0, 4)
+layout_mode = 2
+
+[node name="bottom_hbox" type="HBoxContainer" parent="vbox"]
+custom_minimum_size = Vector2(0, 20)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="btn_back" type="Button" parent="vbox/bottom_hbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 10
+text = "Back"
+script = ExtResource("2_ap83c")
+
+[node name="spacer2" type="Control" parent="vbox/bottom_hbox"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="btn_confirm" type="Button" parent="vbox/bottom_hbox"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 30)
+layout_mode = 2
+size_flags_horizontal = 8
+text = "Confirm"
+script = ExtResource("2_ap83c")
+
+[node name="spacer" type="Control" parent="vbox/bottom_hbox"]
+custom_minimum_size = Vector2(10, 0)
+layout_mode = 2
+
+[node name="spacer_bottom" type="Control" parent="vbox"]
+custom_minimum_size = Vector2(0, 10)
+layout_mode = 2

@@ -1,0 +1,70 @@
+[gd_scene load_steps=3 format=3 uid="uid://dqew8y6r6kehh"]
+
+[ext_resource type="Script" uid="uid://bwmq5d4dke1iu" path="res://code/ui/character_select/character_select_btn.gd" id="1_6woqi"]
+[ext_resource type="TileSet" uid="uid://bpkpb6ourtk4s" path="res://data/everything.tres" id="2_5xpxs"]
+
+[node name="CharacterSelectBtn" type="Control"]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -496.0
+offset_bottom = -256.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6woqi")
+
+[node name="back" type="Panel" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_type_variation = &"CSbntBack"
+
+[node name="selected" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+mouse_filter = 2
+theme_type_variation = &"CSBntSelected"
+
+[node name="character_visual" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+position = Vector2(3, 3)
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 12, 0, 45, 0, 0, 0)
+tile_set = ExtResource("2_5xpxs")
+
+[node name="normal" type="Panel" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_type_variation = &"CSbntNormal"
+
+[node name="hover" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+mouse_filter = 2
+theme_type_variation = &"CSbntHover"
+
+[node name="disabled" type="Panel" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+mouse_filter = 2
+theme_type_variation = &"CSBntDisabled"

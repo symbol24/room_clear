@@ -6,7 +6,6 @@ const QUIT_DESC := "quit_desc"
 
 
 @export var btn_pressed_audio:AudioFile
-@export var play_target := &""
 
 @onready var btn_play: Button = %btn_play
 @onready var btn_settings: Button = %btn_settings
@@ -25,7 +24,8 @@ func _ready() -> void:
 
 
 func _btn_play_pressed() -> void:
-	if play_target != &"": Signals.load_scene.emit(play_target, true, true)
+	Signals.toggle_display.emit(&"character_select", true)
+	toggle_ridcontrol(id, false)
 
 
 func _btn_settings_pressed() -> void:

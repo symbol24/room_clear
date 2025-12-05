@@ -13,12 +13,12 @@ grow_vertical = 2
 script = ExtResource("1_qxfn4")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
-custom_minimum_size = Vector2(128, 24)
+custom_minimum_size = Vector2(232, 48)
 layout_mode = 0
-offset_left = 64.0
-offset_top = 30.0
-offset_right = 192.0
-offset_bottom = 57.0
+offset_left = 148.0
+offset_top = 60.0
+offset_right = 380.0
+offset_bottom = 108.0
 theme_type_variation = &"SmallPpopupPanel"
 
 [node name="description" type="Label" parent="PanelContainer"]
