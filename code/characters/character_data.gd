@@ -18,19 +18,20 @@ var movement:AbilityData = null:
 	get:
 		if movement == null: movement = _get_ability(&"movement")
 		return movement
+
 @export var image_coords:Vector2i
 
-var items:Array = []
-var game_manager:GameManager = null
+var _items:Array = []
+var _game_manager:GameManager = null
 
 
 func get_stat(stat:StringName) -> Variant:
-	var result
-	if get(stat) != null:
-		result = get(stat)
+	var result = 0
+	if get(&"_"+stat) != null:
+		result = get(&"_"+stat)
 
-		if not items.is_empty(): pass
-		if game_manager != null: pass
+		if not _items.is_empty(): pass
+		if _game_manager != null: pass
 
 	return result
 

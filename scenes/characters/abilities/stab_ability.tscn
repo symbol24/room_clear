@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dciauey8pes8v"]
+
+[ext_resource type="Script" uid="uid://dcgqy63b43k2n" path="res://code/characters/abilities/melee_ability.gd" id="1_b2210"]
+
+[node name="StabAbility" type="Node2D"]
+script = ExtResource("1_b2210")
+metadata/_custom_type_script = "uid://dcgqy63b43k2n"

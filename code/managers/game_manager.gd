@@ -34,6 +34,7 @@ enum Window_Mode {
 
 var theme:Theme
 var active_character:CharacterData = null
+var active_level:LevelData
 var _data:DataManager = null:
 	get:
 		if _data == null: _data = get_tree().get_first_node_in_group(&"data_manager")
@@ -54,6 +55,7 @@ func _ready() -> void:
 	Signals.update_language.connect(_update_display_language)
 	Signals.toggle_pause.connect(_toggle_pause)
 	Signals.select_character.connect(_select_character)
+	Signals.select_level.connect(_select_level)
 
 
 func _toggle_pause(value:bool) -> void:
@@ -91,4 +93,8 @@ func _update_display_language(locale := "en") -> void:
 
 
 func _select_character(data:CharacterData) -> void:
-	active_character = data.duplicate(true)
+	active_character = data.duplicate(true) if data != null else null
+
+
+func _select_level(data:LevelData) -> void:
+	active_level = data.duplicate(true) if data != null else null

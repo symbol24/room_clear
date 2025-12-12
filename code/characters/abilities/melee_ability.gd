@@ -1,0 +1,1 @@
+class_name MeleeAbility extends Ability

@@ -66,5 +66,6 @@ func _complete_load() -> void:
 	get_tree().root.add_child.call_deferred(active_scene)
 	if not active_scene.is_node_ready(): await active_scene.ready
 	if _extra_time: await get_tree().create_timer(EXTRA_TIME).timeout
-	Signals.toggle_pause.emit(false)
-	Signals.toggle_display.emit(&"loading_screen", false)
+	if not active_scene is Level:
+		Signals.toggle_pause.emit(false)
+		Signals.toggle_display.emit(&"loading_screen", false)

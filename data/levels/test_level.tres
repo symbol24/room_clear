@@ -1,0 +1,25 @@
+[gd_resource type="Resource" script_class="LevelData" load_steps=8 format=3 uid="uid://7cnc0xtl5mpd"]
+
+[ext_resource type="Script" uid="uid://bx5svl10ntasu" path="res://code/levels/rooms/room_data.gd" id="1_nal7b"]
+[ext_resource type="Script" uid="uid://cx3jlcitk6aka" path="res://code/levels/level_data.gd" id="2_1j250"]
+[ext_resource type="Script" uid="uid://d2j8fcrcqhij1" path="res://code/enemies/enemy_wave.gd" id="2_tkee1"]
+[ext_resource type="Script" uid="uid://chm1g41l4hlhi" path="res://code/enemies/enemy_data.gd" id="3_mh4wk"]
+[ext_resource type="Resource" uid="uid://hqf8bm1vvkmu" path="res://data/enemies/test_enemy.tres" id="4_mh4wk"]
+
+[sub_resource type="Resource" id="Resource_41q72"]
+script = ExtResource("2_tkee1")
+enemy_datas = Array[ExtResource("3_mh4wk")]([ExtResource("4_mh4wk")])
+wave_count = 5
+enemies_per_wave = 5
+metadata/_custom_type_script = "uid://d2j8fcrcqhij1"
+
+[sub_resource type="Resource" id="Resource_blhl6"]
+script = ExtResource("1_nal7b")
+outline_coords = Array[Vector2i]([Vector2i(3, 2)])
+enemy_waves = Array[ExtResource("2_tkee1")]([SubResource("Resource_41q72")])
+metadata/_custom_type_script = "uid://bx5svl10ntasu"
+
+[resource]
+script = ExtResource("2_1j250")
+rooms = Array[ExtResource("1_nal7b")]([SubResource("Resource_blhl6")])
+metadata/_custom_type_script = "uid://cx3jlcitk6aka"

@@ -1,6 +1,9 @@
 class_name CharacterSelect extends RidControl
 
 
+const TEST_LEVEL := preload("uid://7cnc0xtl5mpd")
+
+
 @export var play_target := &""
 
 var _selected_character:CharacterData = null
@@ -34,7 +37,9 @@ func _update_character_data(data:CharacterData) -> void:
 func _btn_confirm_pressed() -> void:
 	if _selected_character != null and play_target != &"":
 		Signals.select_character.emit(_selected_character)
-		Signals.load_scene.emit(play_target)
+		Signals.select_level.emit(TEST_LEVEL)
+		Signals.load_scene.emit(play_target, true, true)
+		toggle_ridcontrol(id, false)
 
 
 func _btn_back_pressed() -> void:

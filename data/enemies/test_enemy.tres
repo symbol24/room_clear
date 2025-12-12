@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="EnemyData" load_steps=2 format=3 uid="uid://hqf8bm1vvkmu"]
+
+[ext_resource type="Script" uid="uid://chm1g41l4hlhi" path="res://code/enemies/enemy_data.gd" id="1_uf52v"]
+
+[resource]
+script = ExtResource("1_uf52v")
+image_coord = Vector2i(104, 5)
+id = &"test_enemy"
+display_name = "test enemy"
+_hp = 1
+metadata/_custom_type_script = "uid://chm1g41l4hlhi"

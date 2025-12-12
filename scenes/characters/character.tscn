@@ -17,16 +17,13 @@ z_index = 4096
 script = ExtResource("1_1bdar")
 
 [node name="sprite" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
 position = Vector2(-6, -7)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 104, 0, 0, 0, 0, 0)
 tile_set = ExtResource("1_x31xa")
 
 [node name="move_collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1bdar")
-
-[node name="camera" type="Camera2D" parent="."]
-zoom = Vector2(1.5, 1.5)
-position_smoothing_enabled = true
 
 [node name="aim" type="Node2D" parent="."]
 script = ExtResource("3_e22cc")
@@ -45,3 +42,8 @@ unique_name_in_owner = true
 position = Vector2(-6, 6)
 tile_map_data = PackedByteArray(0, 0, 0, 0, 255, 255, 0, 0, 80, 0, 18, 0, 0, 0)
 tile_set = ExtResource("1_x31xa")
+
+[node name="remote_transform" type="RemoteTransform2D" parent="."]
+unique_name_in_owner = true
+update_rotation = false
+update_scale = false

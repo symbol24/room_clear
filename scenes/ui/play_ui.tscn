@@ -14,3 +14,15 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 15.0
 text = "play ui"
+
+[node name="room_timer" type="Label" parent="."]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(528, 288)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 15.0
+theme_type_variation = &"LevelTimer"
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1

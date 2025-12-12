@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dj80w0t4s35fk"]
+
+[ext_resource type="Script" uid="uid://b74apouu5xfsx" path="res://code/characters/abilities/movement_ability.gd" id="1_rc5yd"]
+
+[node name="DashStabAbility" type="Node2D"]
+script = ExtResource("1_rc5yd")
+metadata/_custom_type_script = "uid://b74apouu5xfsx"

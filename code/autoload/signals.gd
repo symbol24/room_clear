@@ -15,6 +15,8 @@ signal popup_result(id:StringName, is_confirmed:bool)
 signal update_displayed_character(data:CharacterData)
 signal character_select_press_select_button(id:StringName)
 signal character_select_select_character(data:CharacterData)
+signal ability_timer(id:StringName, value:float)
+signal start_room_timer
 
 # Scene Manager
 signal load_scene(id:StringName, display_loading:bool, extra_time:bool)
@@ -27,6 +29,7 @@ signal update_resolution(choice:int)
 signal update_font(is_dyslexia_friendly:bool)
 signal update_language(locale:String)
 signal select_character(data:CharacterData)
+signal select_level(data:LevelData)
 
 # Audio Manager
 signal volumes_updated()
@@ -39,3 +42,18 @@ signal save
 signal load
 signal save_result(code:int)
 signal load_result(code:int)
+
+# Spawn Manager
+signal spawn_character(data:CharacterData)
+signal spawn_enemies(data:EntityData, amount:int, pos:Vector2)
+
+# Utilities
+signal assigne_remote_path_to_camera(new_path:NodePath)
+signal ready_checklist(id:StringName)
+
+# Level
+signal room_start
+signal load_next_room
+
+# Character
+signal toggle_character_active(value:bool)

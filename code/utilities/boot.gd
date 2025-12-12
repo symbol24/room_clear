@@ -56,6 +56,7 @@ func _play_next(anim_name := &"") -> void:
 
 func _load_next() -> void:
 	Signals.toggle_display.emit(&"main_menu", true)
+	Signals.toggle_pause.emit(true)
 	queue_free.call_deferred()
 	
 
