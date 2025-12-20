@@ -27,6 +27,7 @@ func setup_enemy(new_data:EnemyData) -> void:
 		name = _data.id
 		sprite.set_cell(Vector2i.ZERO, 0, _data.image_coord)
 		_active = true
+		print(_data.get_stat(&"speed"))
 
 
 func _move(delta:float, current:Vector2, direction:Vector2) -> Vector2:

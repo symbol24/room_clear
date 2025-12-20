@@ -16,5 +16,5 @@ class_name EntityData extends Resource
 
 
 func get_stat(stat:StringName) -> Variant:
-	if get(stat) != null: return get(stat)
+	if get(&"_"+stat) != null: return get(&"_"+stat)
 	return 0

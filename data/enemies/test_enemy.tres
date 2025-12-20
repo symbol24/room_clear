@@ -7,5 +7,6 @@ script = ExtResource("1_uf52v")
 image_coord = Vector2i(104, 5)
 id = &"test_enemy"
 display_name = "test enemy"
+_speed = 50.0
 _hp = 1
 metadata/_custom_type_script = "uid://chm1g41l4hlhi"

@@ -13,7 +13,6 @@ var _level:Level = null:
 		if _level == null: _level = get_parent() as Level
 		return _level
 var _enemy_pool:Array[Enemy]
-
 var _active_room:RoomData = null
 var _active_wave:EnemyWave
 var _wave_count := 0:
@@ -41,9 +40,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if _spawning_active:
-		if not _wave_spawning: 
-			_wave_delay -= delta
-			print(_wave_delay)
+		if not _wave_spawning: _wave_delay -= delta
 
 
 func _spawn_character(data:CharacterData) -> void:
@@ -82,16 +79,16 @@ func _get_enemy_spawn_position() -> Vector2:
 
 func _spawn_enemies(data:EntityData, amount:int) -> void:
 	for x in amount:
-		print("Spawning enemy: ", x)
+		#print("Spawning enemy: ", x)
 		await _spawn_one_enemy(data, _get_enemy_spawn_position())
 		await get_tree().create_timer(DELAY_BETWEEN_SPAWNS).timeout
 
 
 func _spawn_wave(wave:EnemyWave) -> void:
 	_wave_spawning = true
-	print("Spawning main wave: ", _wave_count)
+	#print("Spawning main wave: ", _wave_count)
 	for x in wave.wave_count:
-		print("Spawning sub wave: ", x)
+		#print("Spawning sub wave: ", x)
 		await _spawn_enemies(wave.get_enemy_to_spawn(), wave.enemies_per_wave)
 		await get_tree().create_timer(wave.delay_between_waves).timeout
 	_wave_count += 1
