@@ -45,7 +45,8 @@ signal load_result(code:int)
 
 # Spawn Manager
 signal spawn_character(data:CharacterData)
-signal spawn_enemies(data:EntityData, amount:int, pos:Vector2)
+signal spawn_enemies(data:EntityData, amount:int)
+signal start_spawning_enemies(data:RoomData)
 
 # Utilities
 signal assigne_remote_path_to_camera(new_path:NodePath)

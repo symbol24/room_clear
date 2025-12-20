@@ -15,6 +15,7 @@ var data:RoomData
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
+	Signals.room_start.connect(_room_start)
 
 
 func setup_room(new_data:RoomData) -> void:
@@ -50,3 +51,7 @@ func _room_clear() -> void:
 func _transfer_area_entered(_area:Area2D) -> void:
 	Signals.toggle_character_active.emit(false)
 	Signals.load_next_room.emit()
+
+
+func _room_start() -> void:
+	Signals.start_spawning_enemies.emit(data)

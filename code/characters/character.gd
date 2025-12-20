@@ -15,6 +15,7 @@ var _direction := Vector2.ZERO
 
 func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_PAUSABLE
+	add_to_group(&"player")
 	Signals.assigne_remote_path_to_camera.emit(get_path())
 	Signals.toggle_character_active.connect(_toggle_active)
 

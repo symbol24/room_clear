@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=4 uid="uid://73vsmr7y8pbp"]
+[gd_scene load_steps=4 format=3 uid="uid://73vsmr7y8pbp"]
 
 [ext_resource type="Script" uid="uid://4bsyfj0gngpc" path="res://code/levels/rooms/room.gd" id="1_ntb0g"]
 [ext_resource type="TileSet" uid="uid://bpkpb6ourtk4s" path="res://data/everything.tres" id="2_gu6v4"]
@@ -12,7 +12,6 @@ script = ExtResource("1_ntb0g")
 [node name="outline" type="TileMapLayer" parent="."]
 unique_name_in_owner = true
 position = Vector2(1, 0)
-tile_map_data = PackedByteArray("AAAPAAAAAAAAAAIAAAAQAAAAAAAAAAIAAAARAAAAAAAAAAIAAAASAAAAAAAAAAIAAAATAAAAAAAAAAIAAAAUAAAAAAAAAAIAAAAVAAAAAAAAAAEAAAAWAAAAAAAAAAIAAAAXAAAAAAAAAAIAAAAYAAAAAAAAAAIAAAAZAAAAAAAAAAIAAAAaAAAAAAAAAAIAAAAbAAAAAAAAAAIAAAA=")
 tile_set = ExtResource("2_gu6v4")
 
 [node name="spawn_point" type="Marker2D" parent="."]

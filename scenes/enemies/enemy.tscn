@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://05ieltwx82n6"]
+
+[ext_resource type="Script" uid="uid://nbiwl6ag3isy" path="res://code/enemies/enemy.gd" id="1_6xk8f"]
+[ext_resource type="TileSet" uid="uid://bpkpb6ourtk4s" path="res://data/everything.tres" id="2_8e3ao"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8e3ao"]
+radius = 3.0
+
+[node name="Enemy" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("1_6xk8f")
+metadata/_custom_type_script = "uid://nbiwl6ag3isy"
+
+[node name="sprite" type="TileMapLayer" parent="."]
+unique_name_in_owner = true
+position = Vector2(-6, -6)
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 108, 0, 22, 0, 0, 0)
+tile_set = ExtResource("2_8e3ao")
+
+[node name="move_collider" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8e3ao")

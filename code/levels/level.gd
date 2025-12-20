@@ -51,4 +51,3 @@ func _spawn_next_room() -> void:
 	add_child(active_room)
 	if not active_room.is_node_ready(): await active_room.ready
 	active_room.setup_room(level_data.get_next_room())
-	

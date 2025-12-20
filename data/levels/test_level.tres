@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="LevelData" load_steps=8 format=3 uid="uid://7cnc0xtl5mpd"]
+[gd_resource type="Resource" script_class="LevelData" load_steps=9 format=3 uid="uid://7cnc0xtl5mpd"]
 
 [ext_resource type="Script" uid="uid://bx5svl10ntasu" path="res://code/levels/rooms/room_data.gd" id="1_nal7b"]
 [ext_resource type="Script" uid="uid://cx3jlcitk6aka" path="res://code/levels/level_data.gd" id="2_1j250"]
@@ -9,14 +9,21 @@
 [sub_resource type="Resource" id="Resource_41q72"]
 script = ExtResource("2_tkee1")
 enemy_datas = Array[ExtResource("3_mh4wk")]([ExtResource("4_mh4wk")])
-wave_count = 5
+wave_count = 2
 enemies_per_wave = 5
+delay_between_waves = 10.0
+metadata/_custom_type_script = "uid://d2j8fcrcqhij1"
+
+[sub_resource type="Resource" id="Resource_mh4wk"]
+script = ExtResource("2_tkee1")
+enemy_datas = Array[ExtResource("3_mh4wk")]([ExtResource("4_mh4wk")])
+enemies_per_wave = 3
 metadata/_custom_type_script = "uid://d2j8fcrcqhij1"
 
 [sub_resource type="Resource" id="Resource_blhl6"]
 script = ExtResource("1_nal7b")
 outline_coords = Array[Vector2i]([Vector2i(3, 2)])
-enemy_waves = Array[ExtResource("2_tkee1")]([SubResource("Resource_41q72")])
+enemy_waves = Array[ExtResource("2_tkee1")]([SubResource("Resource_41q72"), SubResource("Resource_mh4wk")])
 metadata/_custom_type_script = "uid://bx5svl10ntasu"
 
 [resource]
