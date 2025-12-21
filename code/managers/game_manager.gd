@@ -40,6 +40,9 @@ var _data:DataManager = null:
 		if _data == null: _data = get_tree().get_first_node_in_group(&"data_manager")
 		return _data
 
+# DEBUG SETTINGS
+var debug_damage_roll_over := false
+
 
 func _init() -> void:
 	add_to_group(&"game_manager")

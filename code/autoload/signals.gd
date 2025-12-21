@@ -17,6 +17,9 @@ signal character_select_press_select_button(id:StringName)
 signal character_select_select_character(data:CharacterData)
 signal ability_timer(id:StringName, value:float)
 signal start_room_timer
+signal display_damage_number(value:int, type:Damage.Type, is_crit:bool, pos:Vector2)
+signal armor_updated(current_value:int, max_value:int)
+signal hp_uipdated(current_value:int, max_value:int)
 
 # Scene Manager
 signal load_scene(id:StringName, display_loading:bool, extra_time:bool)

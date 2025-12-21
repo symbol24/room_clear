@@ -47,7 +47,6 @@ func _spawn_character(data:CharacterData) -> void:
 	character = CHARACTER.instantiate()
 	_level.add_child(character)
 	if not character.is_node_ready(): await character.ready
-	character.name = data.id
 	character.setup_character(data)
 	for ability:AbilityData in data.abilities:
 		if ability.uid != "":
@@ -65,7 +64,7 @@ func _spawn_one_enemy(data:EnemyData, pos:Vector2) -> void:
 	_level.add_child(new_enemy)
 	if not new_enemy.is_node_ready(): await new_enemy.ready
 	new_enemy.global_position = pos
-	new_enemy.setup_enemy(data)
+	new_enemy.setup_enemy(data.duplicate(true))
 
 
 func _get_enemy() -> Enemy:

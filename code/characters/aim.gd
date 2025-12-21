@@ -11,7 +11,7 @@ var _parent:Character = null:
 
 
 func _process(_delta: float) -> void:
-	if _parent != null and _parent.active:
+	if _parent != null and _parent.get_active():
 		var pos:Vector2 = get_global_mouse_position()
 		marker.global_position = pos
 		aim_line.look_at(pos)

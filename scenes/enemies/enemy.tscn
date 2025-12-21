@@ -1,14 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://05ieltwx82n6"]
+[gd_scene load_steps=8 format=3 uid="uid://05ieltwx82n6"]
 
 [ext_resource type="Script" uid="uid://nbiwl6ag3isy" path="res://code/enemies/enemy.gd" id="1_6xk8f"]
 [ext_resource type="TileSet" uid="uid://bpkpb6ourtk4s" path="res://data/everything.tres" id="2_8e3ao"]
+[ext_resource type="Script" uid="uid://tlmkn0khncbn" path="res://code/utilities/attack.gd" id="3_38ino"]
+[ext_resource type="Script" uid="uid://6518dfjlvo4s" path="res://code/utilities/damage.gd" id="4_fcftc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8e3ao"]
 radius = 3.0
 
+[sub_resource type="Resource" id="Resource_lu5c6"]
+script = ExtResource("4_fcftc")
+metadata/_custom_type_script = "uid://6518dfjlvo4s"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_fcftc"]
+radius = 5.0
+
 [node name="Enemy" type="CharacterBody2D"]
 collision_layer = 8
 collision_mask = 9
+motion_mode = 1
 script = ExtResource("1_6xk8f")
 metadata/_custom_type_script = "uid://nbiwl6ag3isy"
 
@@ -20,3 +30,14 @@ tile_set = ExtResource("2_8e3ao")
 
 [node name="move_collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8e3ao")
+
+[node name="collision_attack" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 2
+script = ExtResource("3_38ino")
+damage = SubResource("Resource_lu5c6")
+metadata/_custom_type_script = "uid://tlmkn0khncbn"
+
+[node name="attack_collider" type="CollisionShape2D" parent="collision_attack"]
+shape = SubResource("CircleShape2D_fcftc")
+debug_color = Color(0.7581245, 0.3823843, 0.6417901, 0.41960785)

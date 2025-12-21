@@ -1,11 +1,15 @@
-[gd_scene load_steps=6 format=3 uid="uid://jby7lgv0mata"]
+[gd_scene load_steps=8 format=3 uid="uid://jby7lgv0mata"]
 
 [ext_resource type="Script" uid="uid://757gr75fwmpu" path="res://code/characters/character.gd" id="1_1bdar"]
 [ext_resource type="TileSet" uid="uid://bpkpb6ourtk4s" path="res://data/everything.tres" id="1_x31xa"]
+[ext_resource type="Script" uid="uid://5i8o51s5ygbs" path="res://code/utilities/hurt_box.gd" id="3_2qjml"]
 [ext_resource type="Script" uid="uid://ctavspv3mukji" path="res://code/characters/aim.gd" id="3_e22cc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_1bdar"]
 radius = 2.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ma1fs"]
+radius = 3.1622777
 
 [sub_resource type="Curve" id="Curve_1bdar"]
 _data = [Vector2(0, 0.1460675), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
@@ -15,6 +19,7 @@ point_count = 2
 top_level = true
 z_index = 4096
 collision_layer = 2
+motion_mode = 1
 script = ExtResource("1_1bdar")
 
 [node name="sprite" type="TileMapLayer" parent="."]
@@ -25,6 +30,16 @@ tile_set = ExtResource("1_x31xa")
 
 [node name="move_collider" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_1bdar")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 16
+script = ExtResource("3_2qjml")
+metadata/_custom_type_script = "uid://5i8o51s5ygbs"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CircleShape2D_ma1fs")
+debug_color = Color(0.7861281, 0.36078113, 0.6234081, 0.41960785)
 
 [node name="aim" type="Node2D" parent="."]
 script = ExtResource("3_e22cc")
